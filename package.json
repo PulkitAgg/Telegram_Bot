@@ -1,0 +1,16 @@
+{
+  "name": "radhekrishnacollection",
+  "version": "1.0.0",
+  "description": "Telegram bot for sending the text and tracking system to telegram channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "forever restart -o out.log -e err.log app.js"
+  },
+  "author": "Pulkit Aggarwal",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-telegram-bot-api": "^0.30.0"
+  }
+}
