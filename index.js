@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const TelegramBot = require('node-telegram-bot-api');
-const token = '702598267:AAGCGpV3XlzFODttpADTIchQaVC2pffeTew';
+const token = YOUR_BOT_TOKEN;
 const bot = new TelegramBot(token, { polling: true });
 
 const app = module.exports = express();
@@ -17,11 +17,10 @@ const sendTracker = function (req, res, next) {
             inline_keyboard: [
                 [{ text: 'Order here', url: 't.me/Prateekagg' }],
                 [{ text: 'Order on whatsapp', url: 'http://api.whatsapp.com/send?phone=+919897886503' }]
-                // [{ text: 'Some button text 3', callback_data: '4443' }]
             ]
         })
     };
-    bot.sendMessage('-1001242685597', req.params.data, options).then(function (sended) {
+    bot.sendMessage(CHAT_ID, req.params.data, options).then(function (sended) {
         console.log('ssss', sended);
     });
     res.statusCode = 200;
